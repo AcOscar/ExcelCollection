@@ -5,9 +5,7 @@ Sub CopyRowsSelectedCellValue()
     If ActiveCell.Value = "-" Then
         Selection.Offset(1, 0).Select
     End If
-    
-    
-    
+        
     xCount = ActiveCell.Value
     
     While xCount > 0
