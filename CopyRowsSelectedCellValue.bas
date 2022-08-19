@@ -2,6 +2,12 @@ Sub CopyRowsSelectedCellValue()
 'Updateby Extendoffice
     Dim xCount As Integer
     
+    If ActiveCell.Value = "-" Then
+        Selection.Offset(1, 0).Select
+    End If
+    
+    
+    
     xCount = ActiveCell.Value
     
     While xCount > 0
@@ -15,9 +21,12 @@ Sub CopyRowsSelectedCellValue()
         
         Selection.Offset(xCount, 0).Select
    
+    While ActiveCell.Value = "-"
+        Selection.Offset(1, 0).Select
+    Wend
+
     xCount = ActiveCell.Value
     
     Wend
 
 End Sub
-
